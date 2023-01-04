@@ -185,6 +185,7 @@ if(NOT ${OQS_BUILD_ONLY_LIB})
       find_package(Doxygen)
       if(DOXYGEN_FOUND)
         set(DOXYFILE ${PROJECT_SOURCE_DIR}/docs/.Doxyfile)
+        set(DOXYGEN_OUTPUT_DIR ${PROJECT_BINARY_DIR}/docs)
         add_custom_target(
             gen_docs
             COMMAND ${PROJECT_SOURCE_DIR}/scripts/run_doxygen.sh ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
